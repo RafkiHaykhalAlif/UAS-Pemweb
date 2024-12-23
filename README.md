@@ -113,15 +113,63 @@ private function setUserCookie($userId) {
     setcookie('user_session', $cookieValue, time() + (86400 * 30), "/");
 }
 ```
+## 5. Hosting Aplikasi Web
+### Langkah-langkah yang dilakukan untuk meng-host aplikasi web
+1. Membuat Akun di InfinityFree:
+Saya mendaftar akun di InfinityFree.net yang menyediakan hosting gratis.
+
+2. Membuat Domain atau Subdomain:
+Saya menggunakan domain/subdomain gratis yang disediakan oleh InfinityFree atau menghubungkan domain khusus yang telah saya beli.
+
+3. Mengunggah File Aplikasi Web:
+File aplikasi diunggah ke server menggunakan File Manager bawaan InfinityFree atau melalui aplikasi FTP seperti FileZilla.
+
+4. Membuat Database:
+Saya membuat database MySQL melalui cPanel di InfinityFree, dan mencatat informasi seperti hostname, username, dan password database.
+
+5. Mengkonfigurasi Aplikasi:
+Saya mengonfigurasi file aplikasi web untuk menghubungkan database dengan detail yang disediakan.
+
+6. Mengaktifkan SSL:
+Saya mengaktifkan sertifikat SSL gratis dari InfinityFree untuk memastikan koneksi HTTPS.
+
+7. Menguji Aplikasi:
+Setelah semuanya diatur, saya menguji aplikasi web melalui URL untuk memastikan semuanya berfungsi.
+
+### Memilih penyedia hosting web yang paling cocok:
+Saya memilih InfinityFree karena:
+1. Gratis: Tidak ada biaya bulanan, cocok untuk aplikasi dengan kebutuhan dasar.
+2. Fitur Lengkap: Menyediakan PHP, MySQL, dan SSL gratis, yang cukup untuk aplikasi web standar.
+3. Tidak Ada Iklan Paksa: InfinityFree tidak menampilkan iklan pada aplikasi web.
+4. Kemudahan Penggunaan: cPanel yang intuitif memudahkan pengelolaan file, database, dan domain.
+
+### Memastikan keamanan aplikasi web:
+1. Menggunakan HTTPS:
+Saya mengaktifkan sertifikat SSL gratis untuk mengenkripsi data antara server dan pengguna.
+
+2. Validasi Input:
+Menambahkan validasi input di sisi server untuk mencegah serangan seperti SQL Injection dan XSS.
+
+3. Pengaturan File Permissions:
+Mengatur file permissions untuk mencegah akses tidak sah ke file sensitif.
+
+4. Menghindari Menyimpan Informasi Sensitif di Public Directory:
+Konfigurasi file seperti config.php diletakkan di luar public directory.
+
+5. Pembaruan Aplikasi:
+Saya secara rutin memperbarui kode aplikasi dan library yang digunakan untuk menutup celah keamanan.
+
+6. Firewall dan Proteksi Hosting:
+InfinityFree memiliki proteksi bawaan terhadap serangan DDoS dan akses tidak sah.
+
+### Konfigurasi server yang diterapkan:
+
+1. Memaksa penggunaan HTTPS.
+2. Mengatur pengalihan URL untuk meningkatkan SEO.
+
 
 ## Teknologi yang Digunakan
 - Frontend: HTML, CSS, JavaScript
 - Backend: PHP
 - Database: MySQL
 - State Management: PHP Sessions & Cookies
-
-## Cara Instalasi
-1. Clone repository ini
-2. Import database bengkel_adi_motor.sql
-3. Sesuaikan konfigurasi database di Database.php
-4. Jalankan di web server dengan PHP
